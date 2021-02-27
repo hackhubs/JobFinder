@@ -83,13 +83,13 @@ const RegisterScreen = ({ navigation }) => {
         loading={loading}
         mode="contained"
         onPress={onSignUpPressed}
-        style={{ marginTop: 24 }}
+        style={{ marginTop: 24,backgroundColor: Colors.primaryColor }}
       >
         Sign Up
       </Button>
       <View style={styles.row}>
         <Text>Already have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.replace("LoginScreen")}>
+        <TouchableOpacity  onPress={() => navigation.replace("LoginScreen")}>
           <Text style={styles.link}>Login</Text>
         </TouchableOpacity>
       </View>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   },
   link: {
     fontWeight: "bold",
-    color: theme.colors.primary,
+    color: Colors.darkColor,
   },
   image: {
     resizeMode:'cover',

@@ -28,18 +28,24 @@ const Dashboard = ({ navigation }) => (
     >
       Employee/student
     </Button>
+    
+    <Button style={{ backgroundColor: Colors.primaryColor }} mode="outlined" onPress={logoutUser} style={{ top: 80 }}>
+      Logout
+    </Button>
+
   </Background>
 );
 
 const styles = StyleSheet.create({
   image: {
     resizeMode: "cover",
+    marginTop:-40,
     justifyContent: "center",
-    width: 350,
+    width: 300,
     borderRadius: 5,
     borderColor: Colors.secondaryColor,
     borderWidth: 2,
-    height: 350,
+    height: 300,
   },
 });
 
