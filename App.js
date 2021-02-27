@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import AuthNavigation from "./app/navigation/AuthNavigation";
 import AppBottom from "./app/navigation/AppBottom";
+import AppBottomEpe from "./app/navigation/AppBottomEpe";
 
 const Stack = createStackNavigator();
 
@@ -17,7 +18,7 @@ export default function App() {
       >
         <Stack.Screen name="Auth" component={AuthNavigation} />
         <Stack.Screen name="Employer" component={AppBottom} />
-        <Stack.Screen name="Employee" component={AppBottom} />
+        <Stack.Screen name="Employee" component={AppBottomEpe} />
       </Stack.Navigator>
     </NavigationContainer>
   );
