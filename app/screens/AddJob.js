@@ -38,6 +38,20 @@ return(
      <Text style={{fontSize:18,fontWeight:'bold'}}>Skills required</Text>
      <Text>Data Science,ML,Excel,basic knowledge of data analyis</Text>
      </View>
+     <View style={styles.sideCont}>
+     <View styles={styles.cont}>
+     <Text style={{fontSize:18,fontWeight:'bold'}}>Start Date</Text>
+     <Text>13 March,2021</Text>
+     </View>
+     <View styles={styles.cont}>
+     <Text style={{fontSize:18,fontWeight:'bold'}}>Duration</Text>
+     <Text>2 years</Text>
+     </View>
+     <View styles={styles.cont}>
+     <Text style={{fontSize:18,fontWeight:'bold'}}>Vacancies</Text>
+     <Text>2</Text>
+     </View>
+     </View>
 </View>
 )
 };
@@ -53,6 +67,10 @@ const styles=StyleSheet.create({
   cont:{
     width:30,
     height:20
+  },
+  sideCont:{
+    flexDirection:'row',
+    margin:10,
   }
 })
 
