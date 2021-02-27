@@ -6,9 +6,10 @@ import StartScreen from './app/screens/StartScreen';
 
 export default function App() {
   return (
-  <StartScreen />
+  // <StartScreen />
+   <AuthNavigation />
   );
-  // <AuthNavigation />;
+ 
 }
 
 const styles = StyleSheet.create({

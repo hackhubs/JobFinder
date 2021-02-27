@@ -7,7 +7,7 @@ const Header = (props) => <Text style={styles.header} {...props} />;
 
 const styles = StyleSheet.create({
   header: {
-    fontSize: 21,
+    fontSize: 20,
     color: theme.colors.primary,
     fontWeight: "bold",
     paddingVertical: 12,
