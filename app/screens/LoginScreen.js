@@ -76,7 +76,7 @@ const LoginScreen = ({ navigation }) => {
           <Text style={styles.forgot}>Forgot your password?</Text>
         </TouchableOpacity>
       </View>
-      <Button loading={loading} mode="contained" onPress={onLoginPressed}>
+      <Button  style={{ backgroundColor: Colors.primaryColor }} loading={loading} mode="contained" onPress={onLoginPressed}>
         Login
       </Button>
       <View style={styles.row}>
@@ -102,11 +102,11 @@ const styles = StyleSheet.create({
   },
   forgot: {
     fontSize: 13,
-    color: theme.colors.secondary,
+    color: Colors.darkColor,
   },
   link: {
     fontWeight: "bold",
-    color: theme.colors.primary,
+    color: Colors.darkColor,
   },
   image: {
     resizeMode:'cover',

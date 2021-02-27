@@ -4,6 +4,7 @@ import Background from "../components/Background";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
+import Colors from '../Constants/Colors';
 
 const StartScreen = ({ navigation }) => (
   <Background>
@@ -12,10 +13,10 @@ const StartScreen = ({ navigation }) => (
   
     <Header>Welcome to the JobFinder App!!</Header>
     <Paragraph>The easiest way to start with your Job Application.</Paragraph>
-    <Button mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
+    <Button  style={{ backgroundColor: Colors.primaryColor }} mode="contained" onPress={() => navigation.navigate("LoginScreen")}>
       Login
     </Button>
-    <Button
+    <Button style={{ backgroundColor: Colors.commonColor }}
       mode="outlined"
       onPress={() => navigation.navigate("RegisterScreen")}
     >
