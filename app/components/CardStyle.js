@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection:'column',
     borderRadius:5,
-    borderColor:Colors.primaryColor,
+    borderColor:Colors.darkColor,
     borderWidth:1,
     margin:5,
   },

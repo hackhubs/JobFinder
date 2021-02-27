@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
   cont: {
     width: 30,
     height: 20,
+    flexWrap:'wrap',
   },
   sideCont: {
     flexDirection: "row",
