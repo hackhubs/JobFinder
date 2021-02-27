@@ -1,12 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import AddJob from "./app/screens/AddJob";
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>hello</Text>
-      <StatusBar style="auto" />
+     <AddJob />
     </View>
   );
 }
