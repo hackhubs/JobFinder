@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-import Home from "../screens/Employer/Home";
+import HomeEp from "../screens/Employee/HomeEp";
 import FillJob from "../screens/Employer/FillJob";
 import Profiler from "../screens/Employer/Profiler";
 
@@ -10,16 +10,17 @@ const Tab = createBottomTabNavigator();
 
 const AppBottom = () => (
   <Tab.Navigator
+    initialRouteName="Home"
     tabBarOptions={{
-      activeBackgroundColor: "#8eb1c6",
-      activeTintColor: "white",
-      inactiveBackgroundColor: "#FCCB45",
-      inactiveTintColor: "black",
+      activeBackgroundColor: "#7cd5f3",
+      activeTintColor: "black",
+      inactiveBackgroundColor: "#0f5e85",
+      inactiveTintColor: "white",
     }}
   >
     <Tab.Screen
       name="Home"
-      component={Home}
+      component={HomeEp}
       options={{
         tabBarIcon: ({ size, color }) => (
           <Icon name="home-variant-outline" size={size} color={color} />
