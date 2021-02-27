@@ -6,11 +6,9 @@ import FillJob from './app/screens/FillJob';
 
 export default function App() {
   return (
-    <FillJob />
-  // <StartScreen />
-  //  <AuthNavigation />
+    // <FillJob />
+   <AuthNavigation />
   );
-}
 
 const styles = StyleSheet.create({
   container: {
