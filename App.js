@@ -1,15 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import AddJob from "./app/screens/AddJob";
-
+import { StyleSheet } from "react-native";
+import AuthNavigation from "./app/navigation/AuthNavigation";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-     <AddJob />
-    </View>
-  );
+  return <AuthNavigation />;
 }
 
 const styles = StyleSheet.create({
