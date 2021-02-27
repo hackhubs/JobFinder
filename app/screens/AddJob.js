@@ -71,6 +71,7 @@ const styles=StyleSheet.create({
   sideCont:{
     flexDirection:'row',
     margin:10,
+    
   }
 })
 
