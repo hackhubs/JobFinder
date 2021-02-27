@@ -5,8 +5,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import AuthNavigation from "./app/navigation/AuthNavigation";
 import AppBottom from "./app/navigation/AppBottom";
 
-import Home from "./app/screens/Employer/Home";
-
 const Stack = createStackNavigator();
 
 export default function App() {
