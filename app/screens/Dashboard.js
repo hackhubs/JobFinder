@@ -13,7 +13,7 @@ const Dashboard = ({ navigation }) => (
     <Paragraph>
       Your amazing app starts here. Open you Category and get started.
     </Paragraph>
-    <Button mode="outlined" onPress={() => navigation.navigate("Home")}>
+    <Button mode="outlined" onPress={() => navigation.navigate("Employer")}>
       Employer
     </Button>
     <Button mode="contained" onPress={() => navigation.navigate("HomeEp")}>
