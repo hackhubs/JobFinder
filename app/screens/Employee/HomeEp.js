@@ -1,20 +1,18 @@
 import React from "react";
-import { View, StyleSheet, Text,ScrollView } from "react-native";
-import CardStyle from '../../components/CardStyle';
+import { View, StyleSheet, Text, ScrollView } from "react-native";
+import CardStyle from "../../components/CardStyle";
 
 function HomeEp(props) {
   return (
     <ScrollView>
-    <View style={styles.container}>
-
+      <View style={styles.container}>
         <CardStyle />
         <CardStyle />
         <CardStyle />
         <CardStyle />
         <CardStyle />
         <CardStyle />
-        
-    </View>
+      </View>
     </ScrollView>
   );
 }
