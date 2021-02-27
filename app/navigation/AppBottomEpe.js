@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import HomeEp from "../screens/Employee/HomeEp";
 import AddJob from "../screens/Employee/AddJob";
 import Profile from "../screens/Employee/Profile";
+import ChatEpe from "../screens/Employee/ChatEpe";
 
 const Tab = createBottomTabNavigator();
 
@@ -33,6 +34,15 @@ const AppBottom = () => (
       options={{
         tabBarIcon: ({ size, color }) => (
           <Icon name="plus-circle-outline" size={size} color={color} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="Chat"
+      component={ChatEpe}
+      options={{
+        tabBarIcon: ({ size, color }) => (
+          <Icon name="chat-outline" size={size} color={color} />
         ),
       }}
     />
