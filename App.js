@@ -6,8 +6,8 @@ import HomeEp from './app/screens/Employee/HomeEp';
 
 export default function App() {
   return (
-    <HomeEp />
-  //  <AuthNavigation />
+    // <HomeEp />
+   <AuthNavigation />
   );
   }
 
