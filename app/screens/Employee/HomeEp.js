@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, ScrollView } from "react-native";
 import CardStyle from "../../components/CardStyle";
 
-const HomeEp(props)=()=>{
+const HomeEp = (props) => {
   return (
     <ScrollView>
       <View style={styles.container}>
