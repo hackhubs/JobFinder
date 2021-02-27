@@ -9,7 +9,8 @@ export default function App() {
     // <FillJob />
    <AuthNavigation />
   );
-
+  }
+  
 const styles = StyleSheet.create({
   container: {
     flex: 1,
