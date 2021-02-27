@@ -5,7 +5,7 @@ import Colors from '../Constants/Colors';
 
 const CardStyle = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.screen}>
       <View style={styles.container}>
        
       <Text style={styles.title}>
@@ -38,9 +38,16 @@ const CardStyle = () => {
 
 
 const styles = StyleSheet.create({
-  
-  container: {
+  screen:{
     flex: 1,
+    flexDirection:'column',
+    borderRadius:5,
+    borderColor:Colors.primaryColor,
+    borderWidth:1,
+    margin:5,
+  },
+  container: {
+    
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop:20,
@@ -48,7 +55,6 @@ const styles = StyleSheet.create({
     marginTop:30,
     marginLeft:10,
     marginRight:10,
-
   },
   title:{
     fontSize:20,
@@ -56,17 +62,16 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     flex:1,
-    marginBottom:10,
-    
+    marginBottom:10,    
   },
   cont: {
     width: 30,
     height: 20,
-    
   },
   sideCont: {
     flexDirection: "row",
     marginBottom: 5,
+    
   },
 });
 

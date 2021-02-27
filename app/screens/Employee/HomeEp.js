@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet, Text, ScrollView } from "react-native";
 import CardStyle from "../../components/CardStyle";
 
-const HomeEp(props)=()=>{
+const HomeEp=()=>{
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -12,12 +12,7 @@ const HomeEp(props)=()=>{
         <CardStyle />
         <CardStyle />
         <CardStyle />
-<<<<<<< HEAD
-
-    </View>
-=======
       </View>
->>>>>>> 0d9c7c332eca2326604dbadabbaf41aaf540aba1
     </ScrollView>
   );
 };
