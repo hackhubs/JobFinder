@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity,Image } from "react-native";
 import { Text } from "react-native-paper";
 import Background from "../components/Background";
-import Logo from "../components/Logo";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import TextInput from "../components/TextInput";
@@ -13,6 +12,7 @@ import { passwordValidator } from "../helpers/passwordValidator";
 import { nameValidator } from "../helpers/nameValidator";
 import { signInUser } from "../api/auth-api";
 import Toast from "../components/Toast";
+import Colors from '../Constants/Colors';
 
 const RegisterScreen = ({ navigation }) => {
   const [name, setName] = useState({ value: "", error: "" });
@@ -46,7 +46,9 @@ const RegisterScreen = ({ navigation }) => {
   return (
     <Background>
       <BackButton goBack={navigation.goBack} />
-      <Logo />
+      <Image source={require("../assets/logo2.jpg")} style={styles.image}>
+      </Image>
+
       <Header>Create Account</Header>
       <TextInput
         label="Name"
@@ -104,6 +106,15 @@ const styles = StyleSheet.create({
   link: {
     fontWeight: "bold",
     color: theme.colors.primary,
+  },
+  image: {
+    resizeMode:'cover',
+    justifyContent: 'center',
+    width:200,
+    borderRadius:250,
+    borderColor:Colors.secondaryColor,
+    borderWidth:2,
+    height:200,
   },
 });
 

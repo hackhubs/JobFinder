@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TouchableOpacity, StyleSheet, View } from "react-native";
+import { TouchableOpacity, StyleSheet, View,Image} from "react-native";
 import { Text } from "react-native-paper";
 import Background from "../components/Background";
 import Logo from "../components/Logo";
@@ -12,6 +12,7 @@ import { emailValidator } from "../helpers/emailValidator";
 import { passwordValidator } from "../helpers/passwordValidator";
 import { loginUser } from "../api/auth-api";
 import Toast from "../components/Toast";
+import Colors from '../Constants/Colors';
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState({ value: "", error: "" });
@@ -41,7 +42,9 @@ const LoginScreen = ({ navigation }) => {
   return (
     <Background>
       <BackButton goBack={navigation.goBack} />
-      <Logo />
+      <Image source={require("../assets/logo2.jpg")} style={styles.image}>
+      </Image>
+  
       <Header>Welcome back.</Header>
       <TextInput
         label="Email"
@@ -104,6 +107,15 @@ const styles = StyleSheet.create({
   link: {
     fontWeight: "bold",
     color: theme.colors.primary,
+  },
+  image: {
+    resizeMode:'cover',
+    justifyContent: 'center',
+    width:200,
+    borderRadius:250,
+    borderColor:Colors.secondaryColor,
+    borderWidth:2,
+    height:200,
   },
 });
 
