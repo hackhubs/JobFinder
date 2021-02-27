@@ -54,6 +54,7 @@ const LoginScreen = ({ navigation }) => {
         autoCompleteType="email"
         textContentType="emailAddress"
         keyboardType="email-address"
+        name="email"
       />
       <TextInput
         label="Password"
@@ -62,6 +63,7 @@ const LoginScreen = ({ navigation }) => {
         onChangeText={(text) => setPassword({ value: text, error: "" })}
         error={!!password.error}
         errorText={password.error}
+        name="password"
         secureTextEntry
       />
       <View style={styles.forgotPassword}>
