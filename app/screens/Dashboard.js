@@ -24,10 +24,13 @@ const Dashboard = ({ navigation }) => (
     <Button
       style={{ backgroundColor: Colors.primaryColor }}
       mode="contained"
-      onPress={() => navigation.navigate("HomeEp")}
+      onPress={() => navigation.navigate("Employee")}
     >
       Employee/student
     </Button>
+    {/* <Button mode="outlined" onPress={logoutUser} style={{ top: 80 }}>
+      Logout
+    </Button> */}
   </Background>
 );
 

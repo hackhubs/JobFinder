@@ -1,8 +1,21 @@
+import { BackHandler, Alert } from "react-native";
 import firebase from "firebase/app";
 import "firebase/auth";
 
-export const logoutUser = () => {
-  firebase.auth().signOut();
+export const logoutUser = ({ navigation }) => {
+  firebase
+    .auth()
+    .signOut()
+    .then(() =>
+      Alert.alert("Hold on!", "Are you sure you want to SignOut app?", [
+        {
+          text: "Cancel",
+          onPress: () => null,
+          style: "cancel",
+        },
+        { text: "YES", onPress: () => BackHandler.exitApp() },
+      ])
+    );
 };
 
 export const signInUser = async ({ name, email, password }) => {

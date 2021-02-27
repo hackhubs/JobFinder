@@ -17,6 +17,7 @@ export default function App() {
       >
         <Stack.Screen name="Auth" component={AuthNavigation} />
         <Stack.Screen name="Employer" component={AppBottom} />
+        <Stack.Screen name="Employee" component={AppBottom} />
       </Stack.Navigator>
     </NavigationContainer>
   );
