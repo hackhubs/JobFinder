@@ -12,12 +12,7 @@ const HomeEp(props)=()=>{
         <CardStyle />
         <CardStyle />
         <CardStyle />
-<<<<<<< HEAD
-
-    </View>
-=======
       </View>
->>>>>>> 0d9c7c332eca2326604dbadabbaf41aaf540aba1
     </ScrollView>
   );
 };
