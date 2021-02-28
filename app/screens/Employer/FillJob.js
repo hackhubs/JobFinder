@@ -8,6 +8,7 @@ import {
   Button,
 } from "react-native";
 import TextInput from "../../components/TextInput";
+import Colors from '../../Constants/Colors';
 import DateTimePicker from "@react-native-community/datetimepicker";
 
 const FillJob = () => {
@@ -152,7 +153,8 @@ const FillJob = () => {
         <TouchableOpacity
           style={{
             margin: 30,
-            backgroundColor: "skyblue",
+            backgroundColor: Colors.secondaryColor,
+            color:'white',
             padding: 15,
             borderRadius: 30,
             alignItems: "center",
@@ -177,7 +179,8 @@ const styles = StyleSheet.create({
   },
   cont: {
     width: 100,
-    height: 20,
+    height: 10,
+ 
   },
   sideCont: {
     flexDirection: "column",

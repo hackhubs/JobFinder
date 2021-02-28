@@ -26,7 +26,7 @@ const AppBottom = () => (
       component={Home}
       options={{
         tabBarIcon: ({ size, color }) => (
-          <Icon name="home-variant-outline" size={size} color={color} />
+          <Icon name="home-variant-outline" size={32} color={color} />
         ),
       }}
     />
@@ -35,7 +35,7 @@ const AppBottom = () => (
       component={EmptyScreen}
       options={{
         tabBarIcon: ({ size, color }) => (
-          <Icon name="plus-circle-outline" size={size} color={color} />
+          <Icon name="plus-circle-outline" size={32} color={color} />
         ),
       }}
       listeners={({ navigation }) => ({
@@ -51,7 +51,7 @@ const AppBottom = () => (
       options={{
         tabBarLabel: "Chat",
         tabBarIcon: ({ size, color }) => (
-          <Icon name="chat-outline" size={size} color={color} />
+          <Icon name="chat-outline" size={32} color={color} />
         ),
     
       }}
@@ -68,7 +68,7 @@ const AppBottom = () => (
       options={{
         tabBarLabel: "Profile",
         tabBarIcon: ({ size, color }) => (
-          <Icon name="account" size={size} color={color} />
+          <Icon name="account" size={32} color={color} />
         ),
       }}
     />
