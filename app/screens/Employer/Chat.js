@@ -84,7 +84,7 @@ export default class Chat extends Component {
     return (
       <TouchableOpacity onPress={() => navigation.navigate("ChatView")}>
         <View style={styles.row}>
-          <Image  source={require('../../assets/aanya2.jpeg')} style={styles.pic} />
+          <Image source={require('../../assets/aanya2.jpeg')} style={styles.pic} />
           <View>
             <View style={styles.nameContainer}>
               <Text

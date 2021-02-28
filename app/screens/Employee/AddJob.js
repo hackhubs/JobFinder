@@ -15,7 +15,7 @@ const AddJob = () => {
         <Text>
           Aanya Enterprises started in 2001, is a non-profit organization
           committed to bringing the best educational resources to under-served
-          tribal communities of Chandrapur district (haryana). We always
+          tribal communities of Rohtak district (Haryana). We always
           stressed on activities and strategies that cover the whole cycle of
           what is required for providing quality education to an individual
           child in a structured manner. Our mission is to build a platform for
