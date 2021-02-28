@@ -19,6 +19,7 @@ const AppBottom = () => (
       activeTintColor: "black",
       inactiveBackgroundColor: "#0f5e85",
       inactiveTintColor: "white",
+      showLabel: false,
     }}
   >
     <Tab.Screen
