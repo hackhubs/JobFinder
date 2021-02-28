@@ -5,9 +5,11 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import HomeEp from "../screens/Employee/HomeEp";
 import AddJob from "../screens/Employee/AddJob";
 import Profile from "../screens/Employee/Profile";
-import ChatEpe from "../screens/Employee/ChatEpe";
 
 const Tab = createBottomTabNavigator();
+const EmptyScreen = () => {
+  return null;
+};
 
 const AppBottom = () => (
   <Tab.Navigator
@@ -38,13 +40,19 @@ const AppBottom = () => (
       }}
     />
     <Tab.Screen
-      name="Chat"
-      component={ChatEpe}
+      name="ChatScreen"
+      component={EmptyScreen}
       options={{
         tabBarIcon: ({ size, color }) => (
           <Icon name="chat-outline" size={size} color={color} />
         ),
       }}
+      listeners={({ navigation }) => ({
+        tabPress: (event) => {
+          event.preventDefault();
+          navigation.navigate("ChatEpe");
+        },
+      })}
     />
     <Tab.Screen
       name="Profile"
