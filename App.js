@@ -12,6 +12,8 @@ import ChatEpe from "./app/screens/Employee/ChatEpe";
 import Home from "./app/screens/Employer/Home";
 import details from "./app/screens/Employer/details";
 import FillJob from "./app/screens/Employer/FillJob";
+import HomeEp from "./app/screens/Employee/HomeEp";
+import jobdetails from "./app/screens/Employee/jobdetails";
 
 const Stack = createStackNavigator();
 
@@ -27,7 +29,9 @@ export default function App() {
         <Stack.Screen name="Employer" component={AppBottom} />
         <Stack.Screen name="Employee" component={AppBottomEpe} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="HomeEp" component={HomeEp} />
         <Stack.Screen name="Details" component={details} />
+        <Stack.Screen name="jobdetails" component={jobdetails} />
         <Stack.Screen
           name="Add Job"
           component={FillJob}

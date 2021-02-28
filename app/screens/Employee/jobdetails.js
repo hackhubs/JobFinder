@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Input } from "react-native-elements";
 
-const AddJob = () => {
+const jobdetails = () => {
   return (
     <View style={styles.screen}>
       <View styles={styles.cont}>
@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddJob;
+export default jobdetails;
