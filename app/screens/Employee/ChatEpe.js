@@ -19,61 +19,61 @@ export default class ChatEpe extends Component {
           id: 1,
           name: "Mark Doe",
           status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar7.png",
+          image: this.image,
         },
         {
           id: 2,
           name: "Clark Man",
-          status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar6.png",
+          status: "inactive",
+          image: this.image,
         },
         {
           id: 3,
           name: "Jaden Boor",
           status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar5.png",
+          image: this.image,
         },
         {
           id: 4,
           name: "Srick Tree",
           status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar4.png",
+          image: this.image,
         },
         {
           id: 5,
           name: "Erick Doe",
-          status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar3.png",
+          status: "inactive",
+          image: this.image,
         },
         {
           id: 6,
           name: "Francis Doe",
-          status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar2.png",
+          status: "inactive",
+          image: this.image,
         },
         {
           id: 8,
           name: "Matilde Doe",
           status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar1.png",
+          image: this.image,
         },
         {
           id: 9,
           name: "John Doe",
           status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar4.png",
+          image: this.image,
         },
         {
           id: 10,
           name: "Fermod Doe",
-          status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar7.png",
+          status: "inactive",
+          image: this.image,
         },
         {
           id: 11,
           name: "Danny Doe",
-          status: "active",
-          image: "https://bootdey.com/img/Content/avatar/avatar1.png",
+          status: "inactive",
+          image: this.image,
         },
       ],
     };
@@ -83,7 +83,7 @@ export default class ChatEpe extends Component {
     return (
       <TouchableOpacity>
         <View style={styles.row}>
-          <Image source={{ uri: item.image }} style={styles.pic} />
+          <Image  source={require('../../assets/abhi1.jpeg')} style={styles.pic} />
           <View>
             <View style={styles.nameContainer}>
               <Text
@@ -93,7 +93,10 @@ export default class ChatEpe extends Component {
               >
                 {item.name}
               </Text>
+              <View style={{flexDirection:'column'}}>
               <Text style={styles.mblTxt}>Mobile</Text>
+              <Text style={{marginTop:5,marginLeft:10,fontWeight: "200",color: "#777",fontSize: 13}}>11:08 am</Text>
+              </View>
             </View>
             <View style={styles.msgContainer}>
               <Text style={styles.msgTxt}>{item.status}</Text>
@@ -122,6 +125,7 @@ export default class ChatEpe extends Component {
 
 const styles = StyleSheet.create({
   row: {
+    margin:8,
     flexDirection: "row",
     alignItems: "center",
     borderColor: "#DCDCDC",
@@ -133,6 +137,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     width: 60,
     height: 60,
+    marginTop:15,
   },
   nameContainer: {
     flexDirection: "row",
@@ -150,6 +155,8 @@ const styles = StyleSheet.create({
     fontWeight: "200",
     color: "#777",
     fontSize: 13,
+    marginLeft:10,
+    marginTop:6,
   },
   msgContainer: {
     flexDirection: "row",
