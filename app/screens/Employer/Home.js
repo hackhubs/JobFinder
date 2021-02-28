@@ -74,6 +74,7 @@ export default class Home extends Component {
   }
 
   render() {
+    const { navigation } = this.props;
     return (
       <FlatList
         style={styles.root}
@@ -100,22 +101,24 @@ export default class Home extends Component {
             );
           }
           return (
-            <View style={styles.container}>
-              <Image
-                source={{ uri: Notification.image }}
-                style={styles.avatar}
-              />
-              <View style={styles.content}>
-                <View style={mainContentStyle}>
-                  <View style={styles.text}>
-                    <Text style={styles.name}>{Notification.name}</Text>
-                    <Text>{Notification.text}</Text>
+            <TouchableOpacity onPress={() => navigation.navigate("Details")}>
+              <View style={styles.container}>
+                <Image
+                  source={{ uri: Notification.image }}
+                  style={styles.avatar}
+                />
+                <View style={styles.content}>
+                  <View style={mainContentStyle}>
+                    <View style={styles.text}>
+                      <Text style={styles.name}>{Notification.name}</Text>
+                      <Text>{Notification.text}</Text>
+                    </View>
+                    <Text style={styles.timeAgo}>2 hours ago</Text>
                   </View>
-                  <Text style={styles.timeAgo}>2 hours ago</Text>
+                  {attachment}
                 </View>
-                {attachment}
               </View>
-            </View>
+            </TouchableOpacity>
           );
         }}
       />

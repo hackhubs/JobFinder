@@ -80,8 +80,9 @@ export default class Chat extends Component {
   }
 
   renderItem = ({ item }) => {
+    const { navigation } = this.props;
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("ChatView")}>
         <View style={styles.row}>
           <Image source={{ uri: item.image }} style={styles.pic} />
           <View>

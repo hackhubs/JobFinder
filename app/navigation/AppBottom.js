@@ -5,9 +5,11 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Home from "../screens/Employer/Home";
 import FillJob from "../screens/Employer/FillJob";
 import Profiler from "../screens/Employer/Profiler";
-import Chat from "../screens/Employer/Chat";
 
 const Tab = createBottomTabNavigator();
+const EmptyScreen = () => {
+  return null;
+};
 
 const AppBottom = () => (
   <Tab.Navigator
@@ -38,18 +40,26 @@ const AppBottom = () => (
       }}
     />
     <Tab.Screen
-      name="Chat"
-      component={Chat}
+      name="ChatScreen"
+      component={EmptyScreen}
       options={{
+        tabBarLabel: "Chat",
         tabBarIcon: ({ size, color }) => (
           <Icon name="chat-outline" size={size} color={color} />
         ),
       }}
+      listeners={({ navigation }) => ({
+        tabPress: (event) => {
+          event.preventDefault();
+          navigation.navigate("Chat");
+        },
+      })}
     />
     <Tab.Screen
       name="Profile"
       component={Profiler}
       options={{
+        tabBarLabel: "Profile",
         tabBarIcon: ({ size, color }) => (
           <Icon name="account" size={size} color={color} />
         ),

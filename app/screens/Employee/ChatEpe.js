@@ -80,8 +80,9 @@ export default class ChatEpe extends Component {
   }
 
   renderItem = ({ item }) => {
+    const { navigation } = this.props;
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("ChatViewEpe")}>
         <View style={styles.row}>
           <Image source={{ uri: item.image }} style={styles.pic} />
           <View>
