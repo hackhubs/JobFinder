@@ -7,9 +7,12 @@ import {
   ScrollView,
   TouchableOpacity,
   FlatList,
+  useColorScheme,
 } from "react-native";
+// import { Colors } from "react-native/Libraries/NewAppScreen";
 import { logoutUser } from "../../api/auth-api";
 import Button from "../../components/Button";
+import Colors from '../../Constants/Colors';
 export default class Profile extends Component {
   constructor(props) {
     super(props);
@@ -18,28 +21,28 @@ export default class Profile extends Component {
         {
           id: 1,
           image: "https://img.icons8.com/color/70/000000/cottage.png",
-          title: "India",
+          title: "Skills: React-Native,React-JS,Machine Learning,CPP,C,Java",
         },
         {
           id: 2,
           image:
             "https://img.icons8.com/color/70/000000/administrator-male.png",
-          title: "Skills",
+          title: "abhav.thakur25@gmail.com",
         },
         {
           id: 3,
           image: "https://img.icons8.com/color/70/000000/filled-like.png",
-          title: "Comment",
+          title: "+91-8988143226",
         },
         {
           id: 4,
           image: "https://img.icons8.com/color/70/000000/facebook-like.png",
-          title: "Download",
+          title: "Senior Android Developer at Sellify",
         },
         {
           id: 5,
           image: "https://img.icons8.com/color/70/000000/shutdown.png",
-          title: "Edit",
+          title: "Edit Profile",
         },
       ],
     };
@@ -52,11 +55,9 @@ export default class Profile extends Component {
           <View style={styles.headerContent}>
             <Image
               style={styles.avatar}
-              source={{
-                uri: "https://bootdey.com/img/Content/avatar/avatar3.png",
-              }}
+              source={require("../../assets/abhi1.jpeg")}
             />
-            <Text style={styles.name}>Jane Doe</Text>
+            <Text style={styles.username}>Abhav Thakur</Text>
           </View>
         </View>
 
@@ -86,7 +87,17 @@ export default class Profile extends Component {
             }}
           />
         </View>
-        <Button mode="outlined" onPress={logoutUser} style={{ top: 80 }}>
+        <Button mode="outlined" onPress={logoutUser} style={{ 
+          top: 80,width:'80%',marginLeft:40,borderRadius:8,
+          backgroundColor:Colors.secondaryColor,
+          shadowColor: Colors.commonColor,
+    shadowOpacity: 0.2,
+    shadowOffset: {
+      height: 1,
+      width: -2,
+    },
+    elevation: 2,
+          }}>
           Logout
         </Button>
       </View>
@@ -107,17 +118,19 @@ const styles = StyleSheet.create({
     height: 130,
     borderRadius: 63,
     borderWidth: 4,
-    borderColor: "#FF6347",
+    borderColor: Colors.secondaryColor,
     marginBottom: 10,
+    marginTop:10,
   },
   icon: {
     width: 40,
     height: 40,
   },
   title: {
-    fontSize: 18,
-    color: "#EE82EE",
-    marginLeft: 4,
+    fontSize: 16,
+    color: Colors.darkColor,
+    marginLeft: 8,
+    marginTop:6,
   },
   btn: {
     marginLeft: "auto",
@@ -129,7 +142,7 @@ const styles = StyleSheet.create({
   },
   box: {
     padding: 5,
-    marginBottom: 2,
+    marginBottom: 5,
     backgroundColor: "#FFFFFF",
     flexDirection: "row",
     shadowColor: "black",
@@ -139,9 +152,10 @@ const styles = StyleSheet.create({
       width: -2,
     },
     elevation: 2,
+    borderRadius:8,
   },
   username: {
-    color: "#20B2AA",
+    color: Colors.darkColor,
     fontSize: 22,
     alignSelf: "center",
     marginLeft: 10,

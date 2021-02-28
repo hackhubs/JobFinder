@@ -9,7 +9,10 @@ import {
   FlatList,
 } from "react-native";
 import { logoutUser } from "../../api/auth-api";
+import { Foundation } from '@expo/vector-icons';
 import Button from "../../components/Button";
+import Colors from "../../Constants/Colors";
+
 export default class Profiler extends Component {
   constructor(props) {
     super(props);
@@ -18,28 +21,28 @@ export default class Profiler extends Component {
         {
           id: 1,
           image: "https://img.icons8.com/color/70/000000/cottage.png",
-          title: "India",
+          title: "Skills: React-Native,React-JS,CPP,C,Java",
         },
         {
           id: 2,
           image:
             "https://img.icons8.com/color/70/000000/administrator-male.png",
-          title: "Skills",
+          title: "jainaanya2000@gmail.com",
         },
         {
           id: 3,
           image: "https://img.icons8.com/color/70/000000/filled-like.png",
-          title: "Comment",
+          title: "+91-8950501910",
         },
         {
           id: 4,
           image: "https://img.icons8.com/color/70/000000/facebook-like.png",
-          title: "Download",
+          title: "Senior Frontend Developer at Sellify",
         },
         {
           id: 5,
           image: "https://img.icons8.com/color/70/000000/shutdown.png",
-          title: "Edit",
+          title: "Edit Profile",
         },
       ],
     };
@@ -52,11 +55,9 @@ export default class Profiler extends Component {
           <View style={styles.headerContent}>
             <Image
               style={styles.avatar}
-              source={{
-                uri: "https://bootdey.com/img/Content/avatar/avatar3.png",
-              }}
+              source={require("../../assets/aanya2.jpeg")}
             />
-            <Text style={styles.name}>Jane Doe</Text>
+            <Text style={styles.username}>Aanya Jain</Text>
           </View>
         </View>
 
@@ -86,7 +87,24 @@ export default class Profiler extends Component {
             }}
           />
         </View>
-        <Button mode="outlined" onPress={logoutUser} style={{ top: 80 }}>
+        <Button
+          mode="outlined"
+          onPress={logoutUser}
+          style={{
+            top: 80,
+            marginLeft: 40,
+            width:'80%',
+            borderRadius: 8,
+            backgroundColor: Colors.secondaryColor,
+            shadowColor: Colors.commonColor,
+            shadowOpacity: 0.2,
+            shadowOffset: {
+              height: 1,
+              width: -2,
+            },
+            elevation: 2,
+          }}
+        >
           Logout
         </Button>
       </View>
@@ -107,8 +125,9 @@ const styles = StyleSheet.create({
     height: 130,
     borderRadius: 63,
     borderWidth: 4,
-    borderColor: "#FF6347",
+    borderColor: Colors.commonColor,
     marginBottom: 10,
+    marginTop: 10,
   },
   icon: {
     width: 40,
@@ -116,8 +135,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    color: "#EE82EE",
+    color: Colors.darkColor,
     marginLeft: 4,
+    marginTop: 6,
   },
   btn: {
     marginLeft: "auto",
@@ -129,7 +149,7 @@ const styles = StyleSheet.create({
   },
   box: {
     padding: 5,
-    marginBottom: 2,
+    marginBottom: 5,
     backgroundColor: "#FFFFFF",
     flexDirection: "row",
     shadowColor: "black",
@@ -139,9 +159,10 @@ const styles = StyleSheet.create({
       width: -2,
     },
     elevation: 2,
+    borderRadius: 8,
   },
   username: {
-    color: "#20B2AA",
+    color: Colors.darkColor,
     fontSize: 22,
     alignSelf: "center",
     marginLeft: 10,
