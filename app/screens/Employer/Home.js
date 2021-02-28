@@ -23,7 +23,7 @@ export default class Home extends Component {
         {
           id: 2,
           image: this.image,
-          name: "John Ray",
+          name: "John Ray ",
           text: "UI/UX Designer",
           attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
@@ -37,7 +37,7 @@ export default class Home extends Component {
         {
           id: 5,
           image: this.image,
-          name: "Mari",
+          name: "Mari  ",
           text: "Dance Teacher",
           attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
@@ -51,14 +51,14 @@ export default class Home extends Component {
         {
           id: 6,
           image: this.image,
-          name: "Clark June Boom!",
+          name: "Clark June Boom! ",
           text: "Waiter ",
           attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
         {
           id: 7,
           image: this.image,
-          name: "John Ray",
+          name: "John Ray ",
           text: "Artist",
           attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
@@ -108,7 +108,7 @@ export default class Home extends Component {
                       <Text style={styles.name}>{Notification.name}</Text>
                       <Text>{Notification.text}</Text>
                     </View>
-                    <Text style={styles.timeAgo}>2 hours ago</Text>
+                    <Text style={styles.timeAgo}> 2 hours ago</Text>
                   </View>
                   {attachment}
                 </View>
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   text: {
-    margin: 5,
+    margin: 6,
     flexDirection: "row",
     flexWrap: "wrap",
   },

@@ -3,7 +3,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Home from "../screens/Employer/Home";
-import FillJob from "../screens/Employer/FillJob";
 import Profiler from "../screens/Employer/Profiler";
 
 const Tab = createBottomTabNavigator();
@@ -33,12 +32,18 @@ const AppBottom = () => (
     />
     <Tab.Screen
       name="jobs"
-      component={FillJob}
+      component={EmptyScreen}
       options={{
         tabBarIcon: ({ size, color }) => (
           <Icon name="plus-circle-outline" size={size} color={color} />
         ),
       }}
+      listeners={({ navigation }) => ({
+        tabPress: (event) => {
+          event.preventDefault();
+          navigation.navigate("Add Job");
+        },
+      })}
     />
     <Tab.Screen
       name="ChatScreen"

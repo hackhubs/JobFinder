@@ -3,151 +3,163 @@ import {
   View,
   Text,
   StyleSheet,
-  TextInput,
   ScrollView,
   TouchableOpacity,
+  Button,
 } from "react-native";
-import Colors from "../../Constants/Colors";
+import TextInput from "../../components/TextInput";
+import DateTimePicker from "@react-native-community/datetimepicker";
 
 const FillJob = () => {
   const [value, onChangeText] = useState("");
+  const [date, setDate] = useState(new Date(1598051730000));
+  const [mode, setMode] = useState("date");
+  const [show, setShow] = useState(false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate || date;
+    setShow(Platform.OS === "ios");
+    setDate(currentDate);
+  };
+
+  const showMode = (currentMode) => {
+    setShow(true);
+    setMode(currentMode);
+  };
+
+  const showDatepicker = () => {
+    showMode("date");
+  };
+
+  const showTimepicker = () => {
+    showMode("time");
+  };
 
   return (
     <ScrollView>
       <View style={styles.screen}>
         <View styles={styles.cont}>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>Company Name</Text>
           <TextInput
-            style={{
-              marginTop: 10,
-              height: 30,
-              borderColor: "#c3c5c6",
-              borderWidth: 1,
-            }}
+            label="Company Name"
+            returnKeyType="next"
+            // value={name.value}
+            // onChangeText={(text) => setName({ value: text, error: "" })}
+            // error={!!name.error}
+            // errorText={name.error}
             onChangeText={(text) => onChangeText(text)}
             value={value}
           />
         </View>
         <View styles={styles.cont}>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-            About Company
-          </Text>
           <TextInput
-            style={{
-              marginTop: 10,
-              height: 70,
-              borderColor: "#c3c5c6",
-              borderWidth: 1,
-            }}
-            onChangeText={(text) => onChangeText(text)}
-            value={value}
+            label="About Company"
+            returnKeyType="next"
+            // value={name.value}
+            // onChangeText={(text) => setName({ value: text, error: "" })}
+            // error={!!name.error}
+            // errorText={name.error}
           />
         </View>
         <View styles={styles.cont}>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>Job Type</Text>
           <TextInput
-            style={{
-              marginTop: 10,
-              height: 30,
-              borderColor: "#c3c5c6",
-              borderWidth: 1,
-            }}
-            onChangeText={(text) => onChangeText(text)}
-            value={value}
+            label="Job Details"
+            returnKeyType="next"
+            // value={name.value}
+            // onChangeText={(text) => setName({ value: text, error: "" })}
+            // error={!!name.error}
+            // errorText={name.error}
           />
         </View>
         <View styles={styles.cont}>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>About job</Text>
-
           <TextInput
-            style={{
-              marginTop: 10,
-              height: 70,
-              borderColor: "#c3c5c6",
-              borderWidth: 1,
-            }}
-            onChangeText={(text) => onChangeText(text)}
-            value={value}
+            label="About Job"
+            returnKeyType="next"
+            // value={name.value}
+            // onChangeText={(text) => setName({ value: text, error: "" })}
+            // error={!!name.error}
+            // errorText={name.error}
+            numberOfLines={2}
           />
         </View>
         <View styles={styles.cont}>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>Salary/month</Text>
-
           <TextInput
-            style={{
-              marginTop: 10,
-              height: 30,
-              borderColor: "#c3c5c6",
-              borderWidth: 1,
-            }}
-            onChangeText={(text) => onChangeText(text)}
-            value={value}
+            label="Salary/Month"
+            returnKeyType="next"
+            // value={name.value}
+            // onChangeText={(text) => setName({ value: text, error: "" })}
+            // error={!!name.error}
+            // errorText={name.error}
           />
         </View>
         <View styles={styles.cont}>
-          <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-            Skills required
-          </Text>
           <TextInput
-            style={{
-              marginTop: 10,
-              height: 30,
-              borderColor: "#c3c5c6",
-              borderWidth: 1,
-            }}
-            onChangeText={(text) => onChangeText(text)}
-            value={value}
+            label="Skills Required"
+            returnKeyType="next"
+            // value={name.value}
+            // onChangeText={(text) => setName({ value: text, error: "" })}
+            // error={!!name.error}
+            // errorText={name.error}
           />
         </View>
         <View style={styles.sideCont}>
           <View styles={styles.cont}>
-            <Text style={{ fontSize: 18, fontWeight: "bold" }}>Start Date</Text>
+            {/* <TextInput
+              label="Start Date"
+              returnKeyType="next"
+              // value={name.value}
+              // onChangeText={(text) => setName({ value: text, error: "" })}
+              // error={!!name.error}
+              // errorText={name.error}
+            /> */}
+            <View>
+              <View style={{ justifyContent: "space-between" }}>
+                <Button onPress={showDatepicker} title="Show date picker!" />
+                <Button onPress={showTimepicker} title="Show time picker!" />
+              </View>
+              {show && (
+                <DateTimePicker
+                  testID="dateTimePicker"
+                  value={date}
+                  mode={mode}
+                  is24Hour={true}
+                  display="default"
+                  onChange={onChange}
+                />
+              )}
+            </View>
+          </View>
+          <View styles={styles.cont}>
             <TextInput
-              style={{
-                margin: 10,
-                height: 30,
-                borderColor: "#c3c5c6",
-                borderWidth: 1,
-              }}
-              onChangeText={(text) => onChangeText(text)}
-              value={value}
+              label="Duration"
+              returnKeyType="next"
+              // value={name.value}
+              // onChangeText={(text) => setName({ value: text, error: "" })}
+              // error={!!name.error}
+              // errorText={name.error}
             />
           </View>
           <View styles={styles.cont}>
-            <Text style={{ fontSize: 18, fontWeight: "bold" }}>Duration</Text>
-
             <TextInput
-              style={{
-                margin: 10,
-                height: 30,
-                width: 40,
-                borderColor: "#c3c5c6",
-                borderWidth: 1,
-              }}
-              onChangeText={(text) => onChangeText(text)}
-              value={value}
+              label="Vacancies"
+              returnKeyType="next"
+              // value={name.value}
+              // onChangeText={(text) => setName({ value: text, error: "" })}
+              // error={!!name.error}
+              // errorText={name.error}
             />
           </View>
-          <View styles={styles.cont}>
-            <Text style={{ fontSize: 18, fontWeight: "bold" }}>Vacancies</Text>
-            <TextInput
-              style={{
-                margin: 10,
-                height: 30,
-                width: 30,
-                borderColor: "#c3c5c6",
-                borderWidth: 1,
-              }}
-              onChangeText={(text) => onChangeText(text)}
-              value={value}
-            />
-          </View>
-          <TouchableOpacity
-            style={{ margin: 30, backgroundColor: "skyblue", padding: 15 }}
-          >
-            <Text>Submit</Text>
-          </TouchableOpacity>
         </View>
+        <TouchableOpacity
+          style={{
+            margin: 30,
+            backgroundColor: "skyblue",
+            padding: 15,
+            borderRadius: 30,
+            alignItems: "center",
+          }}
+        >
+          <Text>Submit</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -164,12 +176,11 @@ const styles = StyleSheet.create({
     paddingRight: 36,
   },
   cont: {
-    width: 30,
+    width: 100,
     height: 20,
   },
   sideCont: {
-    flexDirection: "row",
-    margin: 10,
+    flexDirection: "column",
   },
 });
 

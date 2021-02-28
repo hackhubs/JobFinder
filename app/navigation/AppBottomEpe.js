@@ -51,7 +51,7 @@ const AppBottom = () => (
       listeners={({ navigation }) => ({
         tabPress: (event) => {
           event.preventDefault();
-          navigation.navigate("ChatEpe");
+          navigation.navigate("Chats");
         },
       })}
     />

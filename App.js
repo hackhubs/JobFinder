@@ -11,6 +11,7 @@ import Chat from "./app/screens/Employer/Chat";
 import ChatEpe from "./app/screens/Employee/ChatEpe";
 import Home from "./app/screens/Employer/Home";
 import details from "./app/screens/Employer/details";
+import FillJob from "./app/screens/Employer/FillJob";
 
 const Stack = createStackNavigator();
 
@@ -27,6 +28,11 @@ export default function App() {
         <Stack.Screen name="Employee" component={AppBottomEpe} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={details} />
+        <Stack.Screen
+          name="Add Job"
+          component={FillJob}
+          options={{ headerShown: true }}
+        />
 
         <Stack.Screen
           name="Chat"
@@ -34,12 +40,20 @@ export default function App() {
           options={{ headerShown: true }}
         />
         <Stack.Screen
-          name="ChatEpe"
+          name="Chats"
           component={ChatEpe}
           options={{ headerShown: true }}
         />
-        <Stack.Screen name="ChatView" component={ChatView} />
-        <Stack.Screen name="ChatViewEpe" component={ChatViewEpe} />
+        <Stack.Screen
+          name="ChatView"
+          component={ChatView}
+          options={{ headerShown: true }}
+        />
+        <Stack.Screen
+          name="ChatViewEpe"
+          component={ChatViewEpe}
+          options={{ headerShown: true }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
