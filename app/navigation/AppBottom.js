@@ -47,6 +47,7 @@ const AppBottom = () => (
         tabBarIcon: ({ size, color }) => (
           <Icon name="chat-outline" size={size} color={color} />
         ),
+    
       }}
       listeners={({ navigation }) => ({
         tabPress: (event) => {
