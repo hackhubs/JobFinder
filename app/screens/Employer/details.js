@@ -18,9 +18,9 @@ export default class details extends Component {
       modalVisible: false,
       userSelected: [],
       product: {
-        name: "Lorem ipsum dolor sit amet",
+        name: "Abhav Thakur",
         description:
-          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+          "I am a full stack developer wanting to learn  new skills and work with a enthusiastic environment with like-minded people",
         created: "",
         images: [
           "https://bootdey.com/img/Content/avatar/avatar6.png",
@@ -54,7 +54,7 @@ export default class details extends Component {
                 this.__setImageSelected(prop);
               }}
             >
-              <Image style={styles.smallImage} source={{ uri: prop }} />
+              <Image style={styles.smallImage}  />
             </TouchableOpacity>
           );
         })}
@@ -91,7 +91,7 @@ export default class details extends Component {
             <View style={styles.cardContent}>
               <View style={styles.header}>
                 <View style={styles.mainImageContainer}>
-                  <Image style={styles.mainImage} source={{ uri: mainImage }} />
+                  <Image style={styles.mainImage}  source={require("../../assets/abhi1.jpeg")} />
                 </View>
                 {this.__renderImages()}
               </View>
@@ -149,6 +149,8 @@ const styles = StyleSheet.create({
   mainImage: {
     width: 200,
     height: 200,
+    borderRadius:8,
+    margin:30,
   },
   smallImagesContainer: {
     flexDirection: "column",

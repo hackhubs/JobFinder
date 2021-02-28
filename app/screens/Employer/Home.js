@@ -18,49 +18,49 @@ export default class Home extends Component {
           image: this.image,
           name: "Abhav Thakur",
           text: "React Native Developer",
-          attachment: "https://via.placeholder.com/100x100/FFB6C1/000000",
+          // attachment: "https://via.placeholder.com/100x100/FFB6C1/000000",
         },
         {
           id: 2,
           image: this.image,
           name: "John Ray",
           text: "UI/UX Designer",
-          attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
+          // attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 4,
           image: this.image,
           name: "Divya Goel",
           text: "Primary School Teacher",
-          attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
+          // attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 5,
           image: this.image,
           name: "Mari",
           text: "Dance Teacher",
-          attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
+          // attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 1,
           image: this.image,
           name: "Frank Odalthh",
           text: "Business Analyst",
-          attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
+          // attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
         {
           id: 6,
           image: this.image,
           name: "Clark June Boom!",
           text: "Waiter ",
-          attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
+          // attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
         {
           id: 7,
           image: this.image,
           name: "John Ray",
           text: "Artist",
-          attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
+          // attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
       ],
     };
@@ -110,7 +110,7 @@ export default class Home extends Component {
                     </View>
                     <Text style={styles.timeAgo}>2 hours ago</Text>
                   </View>
-                  {attachment}
+                  {/* {attachment} */}
                 </View>
               </View>
             </TouchableOpacity>
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
   text: {
     margin: 5,
-    flexDirection: "row",
+    flexDirection: "column",
     flexWrap: "wrap",
   },
   content: {
