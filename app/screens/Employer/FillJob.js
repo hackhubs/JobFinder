@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "column",
     justifyContent: "space-around",
-    top: 25,
+    top: 5,
     paddingRight: 36,
   },
   cont: {
