@@ -17,54 +17,49 @@ export default class Home extends Component {
           id: 3,
           image: this.image,
           name: "Abhav Thakur",
-          text:"React Native Developer",
+          text: "React Native Developer",
           attachment: "https://via.placeholder.com/100x100/FFB6C1/000000",
         },
         {
           id: 2,
           image: this.image,
           name: "John Ray",
-          text:
-            "UI/UX Designer",
+          text: "UI/UX Designer",
           attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 4,
           image: this.image,
           name: "Divya Goel",
-          text:
-            "Primary School Teacher",
+          text: "Primary School Teacher",
           attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 5,
           image: this.image,
           name: "Mari",
-          text:
-            "Dance Teacher",
+          text: "Dance Teacher",
           attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 1,
           image: this.image,
           name: "Frank Odalthh",
-          text:
-            "Business Analyst",
+          text: "Business Analyst",
           attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
         {
           id: 6,
           image: this.image,
           name: "Clark June Boom!",
-          text:
-            "Waiter ",
+          text: "Waiter ",
           attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
         {
           id: 7,
           image: this.image,
           name: "John Ray",
-          text:"Artist",
+          text: "Artist",
           attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
       ],
@@ -72,6 +67,7 @@ export default class Home extends Component {
   }
 
   render() {
+    const { navigation } = this.props;
     return (
       <FlatList
         style={styles.root}
@@ -99,23 +95,25 @@ export default class Home extends Component {
             );
           }
           return (
-            <View style={styles.container}>
-              <Image
-                // source={{ uri: Notification.image }}
-                source={require('../../assets/abhi1.jpeg')}
-                style={styles.avatar}
-              />
-              <View style={styles.content}>
-                <View style={mainContentStyle}>
-                  <View style={styles.text}>
-                    <Text style={styles.name}>{Notification.name}</Text>
-                    <Text>{Notification.text}</Text>
+            <TouchableOpacity onPress={() => navigation.navigate("Details")}>
+              <View style={styles.container}>
+                <Image
+                  // source={{ uri: Notification.image }}
+                  source={require("../../assets/abhi1.jpeg")}
+                  style={styles.avatar}
+                />
+                <View style={styles.content}>
+                  <View style={mainContentStyle}>
+                    <View style={styles.text}>
+                      <Text style={styles.name}>{Notification.name}</Text>
+                      <Text>{Notification.text}</Text>
+                    </View>
+                    <Text style={styles.timeAgo}>2 hours ago</Text>
                   </View>
-                  <Text style={styles.timeAgo}>2 hours ago</Text>
+                  {attachment}
                 </View>
-                {attachment}
               </View>
-            </View>
+            </TouchableOpacity>
           );
         }}
       />
@@ -125,13 +123,13 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create({
   root: {
-    margin:10,
-    padding:3,
-    flex:1,
+    margin: 10,
+    padding: 3,
+    flex: 1,
     backgroundColor: "#FFFFFF",
   },
   container: {
-    margin:4,
+    margin: 4,
     padding: 16,
     flexDirection: "row",
     borderBottomWidth: 1,
