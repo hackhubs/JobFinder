@@ -15,59 +15,52 @@ export default class Home extends Component {
       data: [
         {
           id: 3,
-          image: "https://bootdey.com/img/Content/avatar/avatar7.png",
-          name: "March SoulLaComa",
-          text:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+          image: this.image,
+          name: "Abhav Thakur",
+          text: "React Native Developer",
           attachment: "https://via.placeholder.com/100x100/FFB6C1/000000",
         },
         {
           id: 2,
-          image: "https://bootdey.com/img/Content/avatar/avatar6.png",
-          name: "John DoeLink",
-          text:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+          image: this.image,
+          name: "John Ray",
+          text: "UI/UX Designer",
           attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 4,
-          image: "https://bootdey.com/img/Content/avatar/avatar2.png",
-          name: "Finn DoRemiFaso",
-          text:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-          attachment: "",
+          image: this.image,
+          name: "Divya Goel",
+          text: "Primary School Teacher",
+          attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 5,
-          image: "https://bootdey.com/img/Content/avatar/avatar3.png",
-          name: "Maria More More",
-          text:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-          attachment: "",
+          image: this.image,
+          name: "Mari",
+          text: "Dance Teacher",
+          attachment: "https://via.placeholder.com/100x100/20B2AA/000000",
         },
         {
           id: 1,
-          image: "https://bootdey.com/img/Content/avatar/avatar1.png",
+          image: this.image,
           name: "Frank Odalthh",
-          text:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+          text: "Business Analyst",
           attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
         {
           id: 6,
-          image: "https://bootdey.com/img/Content/avatar/avatar4.png",
+          image: this.image,
           name: "Clark June Boom!",
-          text:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-          attachment: "",
+          text: "Waiter ",
+          attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
         {
           id: 7,
-          image: "https://bootdey.com/img/Content/avatar/avatar5.png",
-          name: "The googler",
-          text:
-            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
-          attachment: "",
+          image: this.image,
+          name: "John Ray",
+          text: "Artist",
+          attachment: "https://via.placeholder.com/100x100/7B68EE/000000",
         },
       ],
     };
@@ -97,6 +90,7 @@ export default class Home extends Component {
               <Image
                 style={styles.attachment}
                 source={{ uri: Notification.attachment }}
+                // source={require('../../assets/abhi1.jpeg')}
               />
             );
           }
@@ -128,9 +122,13 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create({
   root: {
+    margin: 10,
+    padding: 3,
+    flex: 1,
     backgroundColor: "#FFFFFF",
   },
   container: {
+    margin: 4,
     padding: 16,
     flexDirection: "row",
     borderBottomWidth: 1,
@@ -143,7 +141,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   text: {
-    marginBottom: 5,
+    margin: 5,
     flexDirection: "row",
     flexWrap: "wrap",
   },
@@ -158,7 +156,6 @@ const styles = StyleSheet.create({
   img: {
     height: 50,
     width: 50,
-    margin: 0,
   },
   attachment: {
     position: "absolute",
