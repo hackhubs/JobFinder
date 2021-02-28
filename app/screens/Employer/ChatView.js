@@ -13,6 +13,8 @@ import {
   Dimensions,
   KeyboardAvoidingView,
 } from "react-native";
+import Colors from '../../Constants/Colors';
+
 const { width, height } = Dimensions.get("window");
 export default class ChatView extends Component {
   constructor(props) {
@@ -22,52 +24,52 @@ export default class ChatView extends Component {
       messages: [
         {
           id: 1,
-          sent: true,
-          msg: "Lorem ipsum dolor",
+          sent: false,
+          msg: "Hello ma'am!!",
           image: "https://www.bootdey.com/img/Content/avatar/avatar1.png",
         },
         {
           id: 2,
-          sent: true,
-          msg: "sit amet, consectetuer",
+          sent: false,
+          msg: "I am interested in the coder position at your Company",
           image: "https://www.bootdey.com/img/Content/avatar/avatar1.png",
         },
         {
           id: 3,
-          sent: false,
-          msg: "adipiscing elit. Aenean ",
+          sent: true,
+          msg: "Hello Anthony",
           image: "https://www.bootdey.com/img/Content/avatar/avatar6.png",
         },
         {
           id: 4,
           sent: true,
-          msg: "commodo ligula eget dolor.",
+          msg: "You are most welcome at our company,do tell your skills",
           image: "https://www.bootdey.com/img/Content/avatar/avatar1.png",
         },
         {
           id: 5,
           sent: false,
           msg:
-            "Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes",
+            "So I am good in web dev,front-end and android.",
           image: "https://www.bootdey.com/img/Content/avatar/avatar6.png",
         },
         {
           id: 6,
-          sent: true,
+          sent: false,
           msg:
-            "nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo",
+            "I have worked in 2 companies before here,at Sellify and DareU.They wree great leaders and helped me a lot",
           image: "https://www.bootdey.com/img/Content/avatar/avatar1.png",
         },
         {
           id: 7,
-          sent: false,
-          msg: "rhoncus ut, imperdiet",
+          sent: true,
+          msg: "Well then,I think we want someone like your skills",
           image: "https://www.bootdey.com/img/Content/avatar/avatar6.png",
         },
         {
           id: 8,
-          sent: false,
-          msg: "a, venenatis vitae",
+          sent: true,
+          msg: "Yes,you are hired.Welcome aboard",
           image: "https://www.bootdey.com/img/Content/avatar/avatar6.png",
         },
       ],
@@ -107,27 +109,33 @@ export default class ChatView extends Component {
   _renderItem = ({ item }) => {
     if (item.sent === false) {
       return (
+        <ScrollView>
         <View style={styles.eachMsg}>
-          <Image source={{ uri: item.image }} style={styles.userPic} />
+          <Image source={require("../../assets/abhi1.jpeg")} style={styles.userPic} />
           <View style={styles.msgBlock}>
             <Text style={styles.msgTxt}>{item.msg}</Text>
           </View>
         </View>
+        </ScrollView>
       );
     } else {
       return (
+        <ScrollView>
         <View style={styles.rightMsg}>
           <View style={styles.rightBlock}>
             <Text style={styles.rightTxt}>{item.msg}</Text>
           </View>
-          <Image source={{ uri: item.image }} style={styles.userPic} />
+          <Image source={require("../../assets/aanya2.jpeg")} style={styles.userPic} />
         </View>
+        </ScrollView>
       );
+      
     }
   };
 
   render() {
     return (
+      <ScrollView style={{marginTop:40}}>
       <View style={{ flex: 1 }}>
         <KeyboardAvoidingView behavior="padding" style={styles.keyboard}>
           <FlatList
@@ -141,7 +149,7 @@ export default class ChatView extends Component {
           />
           <View style={styles.input}>
             <TextInput
-              style={{ flex: 1 }}
+              style={{ flex: 1}}
               value={this.state.msg}
               placeholderTextColor="#696969"
               onChangeText={(msg) => this.setState({ msg })}
@@ -153,6 +161,7 @@ export default class ChatView extends Component {
           </View>
         </KeyboardAvoidingView>
       </View>
+      </ScrollView>
     );
   }
 }
@@ -163,15 +172,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   image: {
-    width,
-    height,
+    width:40,
+    height:40,
   },
   header: {
     height: 65,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#075e54",
+    backgroundColor: Colors.secondaryColor,
   },
   left: {
     flexDirection: "row",
@@ -194,12 +203,14 @@ const styles = StyleSheet.create({
   },
   input: {
     flexDirection: "row",
-    alignSelf: "flex-end",
+     alignSelf: "flex-end",
+    // position:'absolute',
+    // bottom:0,
     padding: 10,
     height: 40,
     width: width - 20,
     backgroundColor: "#fff",
-    margin: 10,
+    marginTop: 60,
     shadowColor: "#3d3d3d",
     shadowRadius: 2,
     shadowOpacity: 0.5,
@@ -208,6 +219,10 @@ const styles = StyleSheet.create({
     },
     borderColor: "#696969",
     borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: 50,
   },
   eachMsg: {
     flexDirection: "row",
@@ -241,8 +256,8 @@ const styles = StyleSheet.create({
   },
   rightBlock: {
     width: 220,
-    borderRadius: 5,
-    backgroundColor: "#97c163",
+    borderRadius: 8,
+    backgroundColor: Colors.secondaryColor,
     padding: 10,
     shadowColor: "#3d3d3d",
     shadowRadius: 2,
@@ -252,12 +267,12 @@ const styles = StyleSheet.create({
     },
   },
   msgTxt: {
-    fontSize: 15,
+    fontSize: 16,
     color: "#555",
     fontWeight: "600",
   },
   rightTxt: {
-    fontSize: 15,
+    fontSize: 16,
     color: "#202020",
     fontWeight: "600",
   },
