@@ -48,4 +48,7 @@ Equal chance for all.This is a job finder app which helps person from all over t
 3. Then expo start to start the server
 4. Now ,the server will start, open expo app on android phone or android emulator
 5. View the JobFinder app and use it
+
+## try it here :- https://expo.io/@devils/projects/jobFinder
    Thaks for using the app.Have a great time!!
+
